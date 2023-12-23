@@ -1,13 +1,13 @@
 # STARS AND AWARDS: Unraveling 'Epic TV Adventures' Success Through Comprehensive Dataset Analysis"
 
-# ABOUT THE DATASET 
+## ABOUT THE DATASET 
 The dataset, powered by SQL, delves into "Epic TV Adventures," covering awards, characters, credits, episodes, persons, and votes. SQL queries provide key insights into award distribution, organizational achievements, individual contributions, and viewer engagement. This dataset is a valuable resource for making informed decisions to ensure the ongoing success of "Epic TV Adventures."
 
 Insight to be Gained:
 
 To discover details about awards, unique organizations, character award counts, top-rated episodes, average person height, highly voted episodes, organizational success, relationships, individual achievements, and episode comparisons. SQL's analytical capabilities make this dataset essential for navigating the dynamic world of television entertainment.
 
-# QUESTIONS TO LEAD TO THE INSIGHT
+## QUESTIONS TO LEAD TO THE INSIGHT
 
 1. Retrieve all columns from the "Award" table.
 2. List unique organizations from the "Award" table.
@@ -30,14 +30,14 @@ To discover details about awards, unique organizations, character award counts, 
 19. Calculate the total number of awards won by each person.
 20. Find episodes with the same ratings and display their details.
 
-# SQL CODE DEPLOYMENT
+## SQL CODE DEPLOYMENT
 
 
 -- Retrieve all columns from the "Award" table.
 
 SELECT * FROM [dbo].[Award]
 
-![Screenshot](Screenshot 2023-12-23 at 17.52.23.png)
+![Screenshot](Screenshot 2023-12-23.png)
 
 -- List unique organizations from the "Award" table.
 
