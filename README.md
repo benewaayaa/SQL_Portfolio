@@ -109,6 +109,8 @@ SELECT [episode_id] AS [EPISODE ID]
 FROM [dbo].[Episode]
 WHERE [votes] > 100 
 
+![Screenshot](images/8.png)
+
 -- Count the number of awards won by each organization.
 
 SELECT COUNT(*) AS [NUMBER OF AWARDS WON],
