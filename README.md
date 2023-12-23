@@ -37,7 +37,7 @@ To discover details about awards, unique organizations, character award counts, 
 
 SELECT * FROM [dbo].[Award]
 
-![Screenshot](Screenshot 2023-12-23.png)
+![Screenshot](images/1.png)
 
 -- List unique organizations from the "Award" table.
 
