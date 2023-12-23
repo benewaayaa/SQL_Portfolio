@@ -32,55 +32,62 @@ To discover details about awards, unique organizations, character award counts, 
 
 # SQL CODE DEPLOYMENT
 
-##### QUESTION 1: 
+### QUESTION 1: 
 #### RETRIEVE ALL COLUMNS FROM THE "AWARD" TABLE..
 
 Looking at the Actors and Award dataset shows us all about actors and their achievements. It helps stakeholders understand and celebrate successes, make smart decisions, and recognize talent. Also, getting all columns from the "Award" table gives a full picture of awards in "Epic TV Adventures," recognizing achievements and diverse talents that make the series a success.
 
-##### CODE
+### CODE
 SELECT * FROM [dbo].[Award]
 
-# OUTPUT
+### OUTPUT
 ![Screenshot](images/1.png)
 
-# QUESTION 2: 
-# LIST UNIQUE ORGANIZATIONS FROM THE "AWARD" TABLE.
+### QUESTION 2: 
+### LIST UNIQUE ORGANIZATIONS FROM THE "AWARD" TABLE.
 
 Listing unique organizations from the "Award" table shows the variety of entities acknowledging achievements. This helps understand the series' standing, assess the network of accolades, and recognize the diverse support contributing to its success.
 
-# CODE
+### CODE
 SELECT DISTINCT [Organization] AS [THE DIVERSE ORGANIZATION]
 FROM [dbo].[Award]
 
-# OUTPUT
+### OUTPUT
 ![Screenshot](images/2.png)
 
-# QUESTION 2: 
-# COUNT THE TOTAL NUMBER OF RECORDS IN THE "CHARACTER_AWARD" TABLE.
+### QUESTION 2: 
+### COUNT THE TOTAL NUMBER OF RECORDS IN THE "CHARACTER_AWARD" TABLE.
 
 Counting the total number of records in the "Character_Award" table provides a straightforward metric of how many character awards exist. This insight gives a quantitative overview of the recognition received by characters in the series.
 
-# CODE
+### CODE
 SELECT COUNT(*) AS [TOTAL NUMBER OF RECORDS]
 FROM [dbo].[Character_Award]
 
-# OUTPUT
+### OUTPUT
 ![Screenshot](images/3.png)
 
+### QUESTION 3: 
+### DISPLAY THE DISTINCT ROLES FROM THE "CREDIT" TABLE.
 
--- Display the distinct roles from the "Credit" table.
+Displaying the distinct roles from the "Credit" table offers a clear view of the diverse roles associated with the series. This insight helps recognize the breadth of contributions from various individuals, providing an understanding of the collaborative efforts behind the scenes.
 
+### CODE
 SELECT DISTINCT [role] AS [ THE VARIOUS ROLES]
 FROM [dbo].[Credit]
 
+### OUTPUT
 ![Screenshot](images/3.png)
 
--- Find the maximum and minimum birthdates from the "Person" table.
+### QUESTION 4: 
+### FIND THE MAXIMUM AND MINIMUM BIRTHDATES FROM THE "PERSON" TABLE.
 
+### CODE
 SELECT MAX([birthdate]) AS [OLDEST DATE OF BIRTH],
 MIN([birthdate]) AS [YOUNGEST DATE OF BIRTH]
 FROM [dbo].[Person]
 
+### OUTPUT
 ![Screenshot](images/4.png)
 
 -- List the top 5 episodes with the highest ratings.
