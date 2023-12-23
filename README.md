@@ -1,6 +1,6 @@
 # STARS AND AWARDS: Unraveling 'Epic TV Adventures' Dataset Analysis"
 
-## ABOUT THE DATASET 
+#### ABOUT THE DATASET 
 The dataset, powered by SQL, delves into "Epic TV Adventures," covering awards, characters, credits, episodes, persons, and votes. SQL queries provide key insights into award distribution, organizational achievements, individual contributions, and viewer engagement. This dataset is a valuable resource for making informed decisions to ensure the ongoing success of "Epic TV Adventures."
 
 Insight to be Gained:
@@ -32,12 +32,12 @@ To discover details about awards, unique organizations, character award counts, 
 
 # SQL CODE DEPLOYMENT
 
-# QUESTION 1: 
+##### QUESTION 1: 
 #### RETRIEVE ALL COLUMNS FROM THE "AWARD" TABLE..
 
 Looking at the Actors and Award dataset shows us all about actors and their achievements. It helps stakeholders understand and celebrate successes, make smart decisions, and recognize talent. Also, getting all columns from the "Award" table gives a full picture of awards in "Epic TV Adventures," recognizing achievements and diverse talents that make the series a success.
 
-# CODE
+##### CODE
 SELECT * FROM [dbo].[Award]
 
 # OUTPUT
