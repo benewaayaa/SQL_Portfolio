@@ -119,6 +119,7 @@ FROM [dbo].[Award]
 GROUP BY  [Organization]
 ORDER BY [NUMBER OF AWARDS WON] DESC
 
+![Screenshot](images/9.png)
 
 -- Retrieve the names of persons who have not been credited in any episode.
 
@@ -129,10 +130,14 @@ SELECT DISTINCT [person]
 FROM [dbo].[Credit]) 
 ORDER BY [NAMES OF INDIVIDUALS WHO HAVE NOT BEEN CREDITED] 
 
+![Screenshot](images/10.png)
+
 -- Calculate the average height of persons in meters from the "Person" table.
 
 SELECT ROUND(AVG([height_meters]),2)  AS [AVERAGE HEIGHT OF PERSONS]
 FROM [dbo].[Person]
+
+![Screenshot](images/11.png)
 
 -- Find the episode with the most keywords.
 
@@ -143,11 +148,15 @@ FROM [dbo].[Keyword]
 GROUP BY [episode_id]
 ORDER BY [NUMBER OF KEYWORDS] DESC
 
+![Screenshot](images/12.png)
+
 
 -- Calculate the average height of persons in meters from the "Person" table.
 
 SELECT ROUND(AVG([height_meters]),2)  AS [AVERAGE HEIGHT OF PERSONS]
 FROM [dbo].[Person]
+
+![Screenshot](images/13.png)
 
 -- Identify persons who have won awards in multiple categories.
 
@@ -160,6 +169,8 @@ AND NULLIF(RTRIM(LTRIM([Person])), '') IS NOT NULL
 GROUP BY [Person]
 HAVING COUNT(DISTINCT [Award_category]) > 1
 
+![Screenshot](images/14.png)
+
 
 -- List the top 3 most common birthplaces in the "Person" table.
 
@@ -170,6 +181,8 @@ FROM [dbo].[Person]
 WHERE [birth_place] IS NOT NULL AND NULLIF(LTRIM(RTRIM([birth_place])), '') IS NOT NULL
 GROUP BY NULLIF(LTRIM(RTRIM([birth_place])), '')
 ORDER BY birthplace_count DESC;
+
+![Screenshot](images/15.png)
 
 -- Calculate the percentage of votes for each episode in the "Vote" table.
 
@@ -181,12 +194,7 @@ FROM [dbo].[Vote]
 GROUP BY [votes], [percent], [episode_id]
 ORDER BY [votes] DESC
 
-SELECT [episode_id] [THE VARIOUS EPISODES],
-        [votes] [NUMBER OF VOTES],
-        [percent] [PERCENTAGE OF VOTES]
-FROM [dbo].[Vote]
-ORDER BY [percent] DESC
-
+![Screenshot](images/16.png)
 
 -- List the top 3 most common birthplaces in the "Person" table.
 
@@ -197,6 +205,8 @@ FROM [dbo].[Person]
 WHERE [birth_place] IS NOT NULL AND NULLIF(LTRIM(RTRIM([birth_place])), '') IS NOT NULL
 GROUP BY NULLIF(LTRIM(RTRIM([birth_place])), '')
 ORDER BY birthplace_count DESC;
+
+![Screenshot](images/17.png)
 
 
 -- Find the episode with the most keywords.
@@ -212,6 +222,8 @@ ON KD.[episode_id] = EP.[episode_id]
 GROUP BY EP.[title], EP.[episode],EP.[air_date]
 ORDER BY [EPISODE WITH THE MOST KEY PHRASE] DESC
 
+![Screenshot](images/18.png)
+
 
 -- Find the organization with the highest number of awards in a specific year
 
@@ -222,7 +234,8 @@ SELECT TOP 1
  WHERE [Year] = '2014' 
  GROUP BY [Organization]
  ORDER BY [NUMBER OF AWARDS] DESC;
- 
+
+ ![Screenshot](images/19.png)
 
 -- Calculate the percentage of votes for each episode in the "Vote" table.
 
@@ -233,6 +246,8 @@ SELECT [episode_id],
 FROM [dbo].[Vote]
 GROUP BY [votes], [percent], [episode_id]
 ORDER BY [votes] DESC
+
+![Screenshot](images/20.png)
 
 SELECT [episode_id] [THE VARIOUS EPISODES],
         [votes] [NUMBER OF VOTES],
@@ -245,6 +260,8 @@ ORDER BY [percent] DESC
 SELECT 
 AVG([votes]) AS [NUMBER OF VOTES PER EPISODE]
 FROM [dbo].[Episode]
+
+![Screenshot](images/21.png)
 
 -- Determine the first 100 people with the most credited roles in episodes.
 
@@ -262,6 +279,8 @@ JOIN
 ON CT.[Episode_id] =ED.[episode_id]
 ORDER BY [CREDITED(TRUE OR FALSE)] DESC
 
+![Screenshot](images/22.png)
+
 
 -- Find the organization with the highest number of awards in a specific year
 
@@ -272,6 +291,8 @@ SELECT TOP 1
  WHERE [Year] = '2014' 
  GROUP BY [Organization]
  ORDER BY [NUMBER OF AWARDS] DESC;
+
+ ![Screenshot](images/23.png)
  
 -- Calculate the total number of awards won by each person.
 
@@ -283,6 +304,7 @@ WHERE  NULLIF(LTRIM(RTRIM([Person])),'')  IS NOT NULL  AND  [Person] IS NOT NULL
 GROUP BY [Person]
 ORDER BY[TOTAL NUMBER OF AWARDS] DESC
 
+![Screenshot](images/24.png)
 
 -- Find episodes with the same ratings and display their details.
 
@@ -301,4 +323,5 @@ AND ED1.[episode_id] <> ED2.[episode_id]
 WHERE ED1.[episode_id] < ED2.[episode_id]
 ORDER BY ED1.[rating] DESC
 
+![Screenshot](images/25.png)
 
