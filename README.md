@@ -44,11 +44,14 @@ SELECT * FROM [dbo].[Award]
 SELECT DISTINCT [Organization] AS [THE DIVERSE ORGANIZATION]
 FROM [dbo].[Award]
 
+![Screenshot](images/2.png)
 
 -- Count the total number of records in the "Character_Award" table.
 
 SELECT COUNT(*) AS [TOTAL NUMBER OF RECORDS]
 FROM [dbo].[Character_Award]
+
+![Screenshot](images/3.png)
 
 
 -- Display the distinct roles from the "Credit" table.
@@ -56,12 +59,15 @@ FROM [dbo].[Character_Award]
 SELECT DISTINCT [role] AS [ THE VARIOUS ROLES]
 FROM [dbo].[Credit]
 
+![Screenshot](images/3.png)
+
 -- Find the maximum and minimum birthdates from the "Person" table.
 
 SELECT MAX([birthdate]) AS [OLDEST DATE OF BIRTH],
 MIN([birthdate]) AS [YOUNGEST DATE OF BIRTH]
 FROM [dbo].[Person]
 
+![Screenshot](images/4.png)
 
 -- List the top 5 episodes with the highest ratings.
 
@@ -72,6 +78,8 @@ SELECT TOP 5 [title] AS [TITLE]
 FROM [dbo].[Episode]
 ORDER BY [rating] DESC
 
+![Screenshot](images/4.png)
+
 -- Find the organization with the highest number of awards in a specific year
 
 SELECT TOP 1
@@ -81,13 +89,16 @@ SELECT TOP 1
  WHERE [Year] = '2014'
  GROUP BY [Organization]
  ORDER BY [NUMBER OF AWARDS] DESC;
- 
+
+ ![Screenshot](images/6.png)
 
  -- Calculate the average number of votes per episode.
 
 SELECT 
 AVG([votes]) AS [NUMBER OF VOTES PER EPISODE]
 FROM [dbo].[Episode]
+
+![Screenshot](images/7.png)
 
 
 -- Identify episodes with more than 100 votes in the "Episode" table.
