@@ -1,4 +1,4 @@
-# STARS AND AWARDS: Unraveling 'Epic TV Adventures' Success Through Comprehensive Dataset Analysis"
+# STARS AND AWARDS: Unraveling 'Epic TV Adventures' Dataset Analysis"
 
 ## ABOUT THE DATASET 
 The dataset, powered by SQL, delves into "Epic TV Adventures," covering awards, characters, credits, episodes, persons, and votes. SQL queries provide key insights into award distribution, organizational achievements, individual contributions, and viewer engagement. This dataset is a valuable resource for making informed decisions to ensure the ongoing success of "Epic TV Adventures."
@@ -30,29 +30,41 @@ To discover details about awards, unique organizations, character award counts, 
 19. Calculate the total number of awards won by each person.
 20. Find episodes with the same ratings and display their details.
 
-## SQL CODE DEPLOYMENT
+# SQL CODE DEPLOYMENT
 
-## QUESTION 1: 
+# QUESTION 1: 
 #### RETRIEVE ALL COLUMNS FROM THE "AWARD" TABLE..
 
 Looking at the Actors and Award dataset shows us all about actors and their achievements. It helps stakeholders understand and celebrate successes, make smart decisions, and recognize talent. Also, getting all columns from the "Award" table gives a full picture of awards in "Epic TV Adventures," recognizing achievements and diverse talents that make the series a success.
 
+# CODE
 SELECT * FROM [dbo].[Award]
 
+# OUTPUT
 ![Screenshot](images/1.png)
 
--- List unique organizations from the "Award" table.
+# QUESTION 2: 
+# LIST UNIQUE ORGANIZATIONS FROM THE "AWARD" TABLE.
 
+Listing unique organizations from the "Award" table shows the variety of entities acknowledging achievements. This helps understand the series' standing, assess the network of accolades, and recognize the diverse support contributing to its success.
+
+# CODE
 SELECT DISTINCT [Organization] AS [THE DIVERSE ORGANIZATION]
 FROM [dbo].[Award]
 
+# OUTPUT
 ![Screenshot](images/2.png)
 
--- Count the total number of records in the "Character_Award" table.
+# QUESTION 2: 
+# COUNT THE TOTAL NUMBER OF RECORDS IN THE "CHARACTER_AWARD" TABLE.
 
+Counting the total number of records in the "Character_Award" table provides a straightforward metric of how many character awards exist. This insight gives a quantitative overview of the recognition received by characters in the series.
+
+# CODE
 SELECT COUNT(*) AS [TOTAL NUMBER OF RECORDS]
 FROM [dbo].[Character_Award]
 
+# OUTPUT
 ![Screenshot](images/3.png)
 
 
