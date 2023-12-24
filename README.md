@@ -72,6 +72,8 @@ OUTPUT
 ![Screenshot](images/3.png)
 
 QUESTION 4: 
+
+
 DISPLAY THE DISTINCT ROLES FROM THE "CREDIT" TABLE.
 Displaying the distinct roles from the "Credit" table offers a clear view of the diverse roles associated with the series. This insight helps recognize the breadth of contributions from various individuals, providing an understanding of the collaborative efforts behind the scenes.
 
@@ -84,6 +86,8 @@ OUTPUT
 ![Screenshot](images/3.png)
 
 QUESTION 5: 
+
+
 FIND THE MAXIMUM AND MINIMUM BIRTHDATES FROM THE "PERSON" TABLE.
 Listing unique organizations from the "Award" table shows the variety of entities acknowledging achievements. This helps understand the series' standing, assess the network of accolades, and recognize the diverse support contributing to its success.
 
@@ -96,6 +100,8 @@ OUTPUT
 ![Screenshot](images/4.png)
 
 QUESTION 6: 
+
+
 LIST THE TOP 5 EPISODES WITH THE HIGHEST RATINGS.
 Listing the top 5 episodes with the highest ratings offers insights into the most acclaimed and viewer-favored content. This information guides the understanding of audience preferences, enabling content creators to identify successful storytelling elements for future episodes
 
@@ -109,6 +115,8 @@ OUTPUT
 ![Screenshot](images/4.png)
 
 QUESTION 7: 
+
+
 FIND THE ORGANIZATION WITH THE HIGHEST NUMBER OF AWARDS IN A SPECIFIC YEAR.
 Identifying the organization with the highest number of awards in a specific year provides insights into which entity dominated the accolades during that period. This information helps gauge industry recognition, understand organizational achievements, and potentially uncover trends in award distribution over time.
 
@@ -121,6 +129,8 @@ OUTPUT
  ![Screenshot](images/6.png)
 
 QUESTION 8: 
+
+
 CALCULATE THE AVERAGE NUMBER OF VOTES PER EPISODE.
 Calculating the average number of votes per episode offers insights into the level of viewer engagement and popularity of each episode. This metric helps gauge the overall reception of the series and identify episodes that resonate most with the audience, aiding in content planning and strategy.
 
@@ -134,6 +144,8 @@ OUTPUT
 ![Screenshot](images/7.png)
 
 QUESTION 9: 
+
+
 IDENTIFY EPISODES WITH MORE THAN 100 VOTES IN THE "EPISODE" TABLE.
 Identifying episodes with more than 100 votes in the "Episode" table provides insights into the popularity threshold within the series. This information helps pinpoint episodes that have garnered significant viewer attention, indicating high engagement and potential areas of focus for analysis or promotion.
 
@@ -147,6 +159,8 @@ OUTPUT
 ![Screenshot](images/8.png)
 
 QUESTION 10: 
+
+
 COUNT THE NUMBER OF AWARDS WON BY EACH ORGANIZATION
 Counting the number of awards won by each organization provides a quantitative understanding of the distribution of accolades. This insight helps identify which organizations have consistently excelled in recognizing achievements, contributing to a comprehensive view of industry acknowledgment and success.
 
@@ -159,6 +173,8 @@ OUTPUT
 ![Screenshot](images/9.png)
 
 QUESTION 11: 
+
+
 RETRIEVE THE NAMES OF PERSONS WHO HAVE NOT BEEN CREDITED IN ANY EPISODE.
 Retrieving the names of persons who have not been credited in any episode sheds light on individuals possibly overlooked in the series' acknowledgment. This insight helps recognize contributors who may require additional acknowledgment or investigation into their roles within the production.
 
@@ -172,6 +188,8 @@ OUTPUT
 ![Screenshot](images/10.png)
 
 QUESTION 12: 
+
+
 CALCULATE THE AVERAGE HEIGHT OF PERSONS IN METERS FROM THE "PERSON" TABLE.
 Calculating the average height of persons in meters from the "Person" table provides insights into the physical attributes of individuals associated with the series. This information aids in understanding the diversity of heights among the cast and crew, contributing to a more comprehensive characterization of the personnel involved.
 
@@ -184,6 +202,8 @@ OUTPUT
 ![Screenshot](images/11.png)
 
 QUESTION 13: 
+
+
 FIND THE EPISODE WITH THE MOST KEYWORDS.
 Finding the episode with the most keywords provides insights into the richness and complexity of its thematic content. This information helps understand the depth of narrative elements, allowing creators to identify episodes with intricate storytelling and potentially uncover patterns in keyword usage across the series.
 
@@ -196,7 +216,9 @@ OUTPUT
 ![Screenshot](images/12.png)
 
 
-QUESTION 14: 
+QUESTION 14:
+
+
 CALCULATE THE AVERAGE HEIGHT OF PERSONS IN METERS FROM THE "PERSON" TABLE.
 Understanding the average height of persons aids in creating a more nuanced portrayal of characters in the series. This insight can influence casting decisions, character development, and contribute to a more realistic representation of individuals within the production.
 
@@ -208,6 +230,8 @@ SELECT ROUND(AVG([height_meters]),2)  AS [AVERAGE HEIGHT OF PERSONS] FROM [dbo].
 ![Screenshot](images/13.png)
 
 QUESTION 15: 
+
+
 IDENTIFY PERSONS WHO HAVE WON AWARDS IN MULTIPLE CATEGORIES.
 Recognizing these individuals with multiple awards underlines their versatile talents, showcasing their significant contributions to the series. This insight can guide future collaborations and decision-making, ensuring continued success in the industry.
 
@@ -223,6 +247,8 @@ OUTPUT
 ![Screenshot](images/14.png)
 
 QUESTION 16: 
+
+
 LIST THE TOP 3 MOST COMMON BIRTHPLACES IN THE "PERSON" TABLE.
 Understanding the most common birthplaces contributes to a richer characterization of the series' personnel. Insights into geographic patterns enable producers and stakeholders to appreciate the diversity and cultural representation within the team. This information can influence decisions related to casting, storytelling, and fostering an inclusive working environment.
 
@@ -236,6 +262,8 @@ OUTPUT
 ![Screenshot](images/15.png)
 
 QUESTION 17: 
+
+
 CALCULATE THE PERCENTAGE OF VOTES FOR EACH EPISODE IN THE "VOTE" TABLE.
 Understanding the percentage of votes for each episode guides content creators in tailoring future productions to align with viewer preferences. High-percentage episodes can be analyzed for successful storytelling elements, while lower-performing episodes may be assessed for improvement. This insight empowers strategic decisions to enhance audience engagement and overall satisfaction with the series.
 
@@ -250,6 +278,8 @@ OUTPUT
 ![Screenshot](images/16.png)
 
 QUESTION 18: 
+
+
 LIST THE TOP 3 MOST COMMON BIRTHPLACES IN THE "PERSON" TABLE.
 Understanding the top 3 most common birthplaces contributes to a nuanced appreciation of the series' personnel. This insight can inform decisions related to storytelling, character development, and casting, allowing creators to embrace and celebrate the diversity represented in the team. It fosters an inclusive narrative that resonates with a broader audience and enriches the overall viewing experience.
 
@@ -263,6 +293,8 @@ OUTPUT
 
 
 QUESTION 19: 
+
+
 FIND THE EPISODE WITH THE MOST KEYWORDS.
 Identifying the episode with the most keywords allows creators to recognize storytelling intricacies and thematic depth. This insight aids in highlighting episodes that offer a comprehensive narrative experience. Content creators can leverage this information for promotional strategies, emphasizing episodes with rich thematic content to enhance viewer engagement and appreciation of the series.
 
@@ -276,6 +308,8 @@ OUTPUT
 ![Screenshot](images/18.png)
 
 QUESTION 20: 
+
+
 FIND THE ORGANIZATION WITH THE HIGHEST NUMBER OF AWARDS IN A SPECIFIC YEAR.
 Identifying the top organization in a specific year offers insights into industry leaders. This knowledge informs strategic decisions, potential collaborations, and highlights the series' impact, contributing to a nuanced understanding of its standing in the industry.
 
@@ -288,6 +322,8 @@ OUTPUT
 ![Screenshot](images/19.png)
 
 QUESTION 21: 
+
+
 CALCULATE THE PERCENTAGE OF VOTES FOR EACH EPISODE IN THE "VOTE" TABLE.
 Analyzing vote percentages allows creators to focus on successful storytelling elements and understand audience preferences. This insight informs future content creation, enabling strategic decisions to maintain or improve viewer engagement, ensuring ongoing success for the series.
 
@@ -307,6 +343,8 @@ CODE
 SELECT [episode_id] [THE VARIOUS EPISODES],[votes] [NUMBER OF VOTES],[percent] [PERCENTAGE OF VOTES] FROM [dbo].[Vote] ORDER BY [percent] DESC
 
 QUESTION 21: 
+
+
 CALCULATE THE AVERAGE NUMBER OF VOTES PER EPISODE.
 Understanding the average votes per episode aids creators in identifying audience-favored content. This insight informs strategic decisions for storytelling, promotional efforts, and potential improvements to enhance overall viewer satisfaction and the success of the series.
 
@@ -320,6 +358,8 @@ OUTPUT
 ![Screenshot](images/21.png)
 
 QUESTION 22: 
+
+
 DETERMINE THE FIRST 100 PEOPLE WITH THE MOST CREDITED ROLES IN EPISODES.
 Spotting the first 100 prolific contributors sheds light on key individuals and their diverse roles. This insight guides decisions for future collaborations, ensuring continued success and recognition within the series.
 
@@ -334,6 +374,8 @@ OUTPUT
 ![Screenshot](images/22.png)
 
 QUESTION 23: 
+
+
 FIND THE ORGANIZATION WITH THE HIGHEST NUMBER OF AWARDS IN A SPECIFIC YEAR
 Understanding the leading organization for a specific year guides strategic decisions and potential collaborations with industry leaders. This insight deepens awareness of the series' influence and standing, shaping future initiatives for continued success.
 
@@ -346,6 +388,8 @@ OUTPUT
 ![Screenshot](images/23.png)
 
 QUESTION 24: 
+
+
 CALCULATE THE PERCENTAGE OF VOTES FOR EACH EPISODE IN THE "VOTE" TABLE.
 Analyzing vote percentages allows creators to focus on successful storytelling elements and understand audience preferences. This insight informs future content creation, enabling strategic decisions to maintain or improve viewer engagement, ensuring ongoing success for the series.
 
@@ -358,6 +402,8 @@ OUTPUT
 ![Screenshot](images/24.png)
 
 QUESTION 25: 
+
+
 FIND THE ORGANIZATION WITH THE HIGHEST NUMBER OF AWARDS IN A SPECIFIC YEAR.
 Understanding the leading organization for a specific year guides strategic decisions and potential collaborations with industry leaders. This insight deepens awareness of the series' influence and standing, shaping future initiatives for continued success.
 
