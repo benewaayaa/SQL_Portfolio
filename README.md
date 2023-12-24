@@ -40,6 +40,7 @@ Looking at the Actors and Award dataset shows us all about actors and their achi
 
 CODE
 
+
 SELECT * FROM [dbo].[Award]
 
 OUTPUT
