@@ -1,13 +1,13 @@
 # STARS AND AWARDS: Unraveling 'Epic TV Adventures' Dataset Analysis"
 
-## ABOUT THE DATASET 
+# ABOUT THE DATASET 
 The dataset, powered by SQL, delves into "Epic TV Adventures," covering awards, characters, credits, episodes, persons, and votes. SQL queries provide key insights into award distribution, organizational achievements, individual contributions, and viewer engagement. This dataset is a valuable resource for making informed decisions to ensure the ongoing success of "Epic TV Adventures."
 
 Insight to be Gained:
 
 To discover details about awards, unique organizations, character award counts, top-rated episodes, average person height, highly voted episodes, organizational success, relationships, individual achievements, and episode comparisons. SQL's analytical capabilities make this dataset essential for navigating the dynamic world of television entertainment.
 
-## QUESTIONS TO LEAD TO THE INSIGHT
+# QUESTIONS TO LEAD TO THE INSIGHT
 
 1. Retrieve all columns from the "Award" table.
 2. List unique organizations from the "Award" table.
@@ -35,90 +35,90 @@ To discover details about awards, unique organizations, character award counts, 
 # QUESTION 1: 
 ### RETRIEVE ALL COLUMNS FROM THE "AWARD" TABLE..
 
-# Looking at the Actors and Award dataset shows us all about actors and their achievements. It helps stakeholders understand and celebrate successes, make smart decisions, and recognize talent. Also, getting all columns from the "Award" table gives a full picture of awards in "Epic TV Adventures," recognizing achievements and diverse talents that make the series a success.
+Looking at the Actors and Award dataset shows us all about actors and their achievements. It helps stakeholders understand and celebrate successes, make smart decisions, and recognize talent. Also, getting all columns from the "Award" table gives a full picture of awards in "Epic TV Adventures," recognizing achievements and diverse talents that make the series a success.
 
-# CODE
+CODE
 SELECT * FROM [dbo].[Award]
 
-# OUTPUT
+OUTPUT
 ![Screenshot](images/1.png)
 
-# QUESTION 2: 
-# LIST UNIQUE ORGANIZATIONS FROM THE "AWARD" TABLE.
+QUESTION 2: 
+LIST UNIQUE ORGANIZATIONS FROM THE "AWARD" TABLE.
 
-# Listing unique organizations from the "Award" table shows the variety of entities acknowledging achievements. This helps understand the series' standing, assess the network of accolades, and recognize the diverse support contributing to its success.
+Listing unique organizations from the "Award" table shows the variety of entities acknowledging achievements. This helps understand the series' standing, assess the network of accolades, and recognize the diverse support contributing to its success.
 
-# CODE
+CODE
 SELECT DISTINCT [Organization] AS [THE DIVERSE ORGANIZATION] FROM [dbo].[Award]
 
-# OUTPUT
+OUTPUT
 ![Screenshot](images/2.png)
 
-# QUESTION 3: 
-# COUNT THE TOTAL NUMBER OF RECORDS IN THE "CHARACTER_AWARD" TABLE.
-# Counting the total number of records in the "Character_Award" table provides a straightforward metric of how many character awards exist. This insight gives a quantitative overview of the recognition received by characters in the series.
+QUESTION 3: 
+COUNT THE TOTAL NUMBER OF RECORDS IN THE "CHARACTER_AWARD" TABLE.
+Counting the total number of records in the "Character_Award" table provides a straightforward metric of how many character awards exist. This insight gives a quantitative overview of the recognition received by characters in the series.
 
-# CODE
+CODE
 SELECT COUNT(*) AS [TOTAL NUMBER OF RECORDS] FROM [dbo].[Character_Award]
 
-# OUTPUT
+OUTPUT
 ![Screenshot](images/3.png)
 
-# QUESTION 4: 
-# DISPLAY THE DISTINCT ROLES FROM THE "CREDIT" TABLE.
-# Displaying the distinct roles from the "Credit" table offers a clear view of the diverse roles associated with the series. This insight helps recognize the breadth of contributions from various individuals, providing an understanding of the collaborative efforts behind the scenes.
+QUESTION 4: 
+DISPLAY THE DISTINCT ROLES FROM THE "CREDIT" TABLE.
+Displaying the distinct roles from the "Credit" table offers a clear view of the diverse roles associated with the series. This insight helps recognize the breadth of contributions from various individuals, providing an understanding of the collaborative efforts behind the scenes.
 
-# CODE
+CODE
 SELECT DISTINCT [role] AS [THE VARIOUS ROLES]FROM [dbo].[Credit]
 
-# OUTPUT
+OUTPUT
 ![Screenshot](images/3.png)
 
-# QUESTION 5: 
-# FIND THE MAXIMUM AND MINIMUM BIRTHDATES FROM THE "PERSON" TABLE.
-# Listing unique organizations from the "Award" table shows the variety of entities acknowledging achievements. This helps understand the series' standing, assess the network of accolades, and recognize the diverse support contributing to its success.
+QUESTION 5: 
+FIND THE MAXIMUM AND MINIMUM BIRTHDATES FROM THE "PERSON" TABLE.
+Listing unique organizations from the "Award" table shows the variety of entities acknowledging achievements. This helps understand the series' standing, assess the network of accolades, and recognize the diverse support contributing to its success.
 
-# CODE
+CODE
 SELECT MAX([birthdate]) AS [OLDEST DATE OF BIRTH],MIN([birthdate]) AS [YOUNGEST DATE OF BIRTH] FROM [dbo].[Person]
 
-# OUTPUT
+OUTPUT
 ![Screenshot](images/4.png)
 
-# QUESTION 6: 
-# LIST THE TOP 5 EPISODES WITH THE HIGHEST RATINGS.
-# Listing the top 5 episodes with the highest ratings offers insights into the most acclaimed and viewer-favored content. This information guides the understanding of audience preferences, enabling content creators to identify successful storytelling elements for future episodes
+QUESTION 6: 
+LIST THE TOP 5 EPISODES WITH THE HIGHEST RATINGS.
+Listing the top 5 episodes with the highest ratings offers insights into the most acclaimed and viewer-favored content. This information guides the understanding of audience preferences, enabling content creators to identify successful storytelling elements for future episodes
 
-# CODE
+CODE
 SELECT TOP 5 [title] AS [TITLE],[episode_id] AS [EPISODE ID],[rating] AS [TOP RATINGS]
 ,[episode] AS [TOP EPISODE] FROM [dbo].[Episode] ORDER BY [rating] DESC
 
-# OUTPUT
+OUTPUT
 ![Screenshot](images/4.png)
 
-# QUESTION 7: 
-# FIND THE ORGANIZATION WITH THE HIGHEST NUMBER OF AWARDS IN A SPECIFIC YEAR.
-# Identifying the organization with the highest number of awards in a specific year provides insights into which entity dominated the accolades during that period. This information helps gauge industry recognition, understand organizational achievements, and potentially uncover trends in award distribution over time.
+QUESTION 7: 
+FIND THE ORGANIZATION WITH THE HIGHEST NUMBER OF AWARDS IN A SPECIFIC YEAR.
+Identifying the organization with the highest number of awards in a specific year provides insights into which entity dominated the accolades during that period. This information helps gauge industry recognition, understand organizational achievements, and potentially uncover trends in award distribution over time.
 
-# CODE
+CODE
 SELECT TOP 1 [Organization],COUNT(*) AS [NUMBER OF AWARDS] FROM [dbo].[Award] WHERE [Year] = '2014'GROUP BY [Organization] ORDER BY [NUMBER OF AWARDS] DESC;
 
-# OUTPUT
+OUTPUT
  ![Screenshot](images/6.png)
 
-# QUESTION 8: 
-# CALCULATE THE AVERAGE NUMBER OF VOTES PER EPISODE.
-# Calculating the average number of votes per episode offers insights into the level of viewer engagement and popularity of each episode. This metric helps gauge the overall reception of the series and identify episodes that resonate most with the audience, aiding in content planning and strategy.
+QUESTION 8: 
+CALCULATE THE AVERAGE NUMBER OF VOTES PER EPISODE.
+Calculating the average number of votes per episode offers insights into the level of viewer engagement and popularity of each episode. This metric helps gauge the overall reception of the series and identify episodes that resonate most with the audience, aiding in content planning and strategy.
 
-# CODE
+CODE
 SELECT 
 AVG([votes]) AS [NUMBER OF VOTES PER EPISODE] FROM [dbo].[Episode]
 
-# OUTPUT
+OUTPUT
 ![Screenshot](images/7.png)
 
-# QUESTION 9: 
-# IDENTIFY EPISODES WITH MORE THAN 100 VOTES IN THE "EPISODE" TABLE.
-# Identifying episodes with more than 100 votes in the "Episode" table provides insights into the popularity threshold within the series. This information helps pinpoint episodes that have garnered significant viewer attention, indicating high engagement and potential areas of focus for analysis or promotion.
+QUESTION 9: 
+IDENTIFY EPISODES WITH MORE THAN 100 VOTES IN THE "EPISODE" TABLE.
+Identifying episodes with more than 100 votes in the "Episode" table provides insights into the popularity threshold within the series. This information helps pinpoint episodes that have garnered significant viewer attention, indicating high engagement and potential areas of focus for analysis or promotion.
 
 # CODE
 SELECT [episode_id] AS [EPISODE ID],[title] AS [TITLE],[votes] AS [NUMBER OF VOTES]
