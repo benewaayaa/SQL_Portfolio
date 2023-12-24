@@ -33,6 +33,7 @@ To discover details about awards, unique organizations, character award counts, 
 # SQL CODE DEPLOYMENT
 
 # QUESTION 1: 
+
 ### RETRIEVE ALL COLUMNS FROM THE "AWARD" TABLE..
 
 Looking at the Actors and Award dataset shows us all about actors and their achievements. It helps stakeholders understand and celebrate successes, make smart decisions, and recognize talent. Also, getting all columns from the "Award" table gives a full picture of awards in "Epic TV Adventures," recognizing achievements and diverse talents that make the series a success.
@@ -44,6 +45,7 @@ OUTPUT
 ![Screenshot](images/1.png)
 
 QUESTION 2: 
+
 LIST UNIQUE ORGANIZATIONS FROM THE "AWARD" TABLE.
 
 Listing unique organizations from the "Award" table shows the variety of entities acknowledging achievements. This helps understand the series' standing, assess the network of accolades, and recognize the diverse support contributing to its success.
@@ -55,6 +57,7 @@ OUTPUT
 ![Screenshot](images/2.png)
 
 QUESTION 3: 
+
 COUNT THE TOTAL NUMBER OF RECORDS IN THE "CHARACTER_AWARD" TABLE.
 Counting the total number of records in the "Character_Award" table provides a straightforward metric of how many character awards exist. This insight gives a quantitative overview of the recognition received by characters in the series.
 
