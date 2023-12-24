@@ -30,11 +30,11 @@ To discover details about awards, unique organizations, character award counts, 
 19. Calculate the total number of awards won by each person.
 20. Find episodes with the same ratings and display their details.
 
-# SQL CODE DEPLOYMENT
+SQL CODE DEPLOYMENT
 
-# QUESTION 1: 
+QUESTION 1: 
 
-### RETRIEVE ALL COLUMNS FROM THE "AWARD" TABLE..
+#RETRIEVE ALL COLUMNS FROM THE "AWARD" TABLE..
 
 Looking at the Actors and Award dataset shows us all about actors and their achievements. It helps stakeholders understand and celebrate successes, make smart decisions, and recognize talent. Also, getting all columns from the "Award" table gives a full picture of awards in "Epic TV Adventures," recognizing achievements and diverse talents that make the series a success.
 
