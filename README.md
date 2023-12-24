@@ -52,6 +52,7 @@ LIST UNIQUE ORGANIZATIONS FROM THE "AWARD" TABLE.
 Listing unique organizations from the "Award" table shows the variety of entities acknowledging achievements. This helps understand the series' standing, assess the network of accolades, and recognize the diverse support contributing to its success.
 
 CODE
+
 SELECT DISTINCT [Organization] AS [THE DIVERSE ORGANIZATION] FROM [dbo].[Award]
 
 OUTPUT
@@ -63,6 +64,7 @@ COUNT THE TOTAL NUMBER OF RECORDS IN THE "CHARACTER_AWARD" TABLE.
 Counting the total number of records in the "Character_Award" table provides a straightforward metric of how many character awards exist. This insight gives a quantitative overview of the recognition received by characters in the series.
 
 CODE
+
 SELECT COUNT(*) AS [TOTAL NUMBER OF RECORDS] FROM [dbo].[Character_Award]
 
 OUTPUT
