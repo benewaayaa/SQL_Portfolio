@@ -151,6 +151,8 @@ COUNT THE NUMBER OF AWARDS WON BY EACH ORGANIZATION
 Counting the number of awards won by each organization provides a quantitative understanding of the distribution of accolades. This insight helps identify which organizations have consistently excelled in recognizing achievements, contributing to a comprehensive view of industry acknowledgment and success.
 
 CODE
+
+
 SELECT COUNT(*) AS [NUMBER OF AWARDS WON],[Organization] AS [ORGANIZATIONS] FROM [dbo].[Award] GROUP BY  [Organization] ORDER BY [NUMBER OF AWARDS WON] DESC
 
 OUTPUT
@@ -161,6 +163,8 @@ RETRIEVE THE NAMES OF PERSONS WHO HAVE NOT BEEN CREDITED IN ANY EPISODE.
 Retrieving the names of persons who have not been credited in any episode sheds light on individuals possibly overlooked in the series' acknowledgment. This insight helps recognize contributors who may require additional acknowledgment or investigation into their roles within the production.
 
 CODE
+
+
 SELECT [name] AS [NAMES OF INDIVIDUALS WHO HAVE NOT BEEN CREDITED] FROM [dbo].[Person] WHERE [name] NOT IN (SELECT DISTINCT [person] 
 FROM [dbo].[Credit]) ORDER BY [NAMES OF INDIVIDUALS WHO HAVE NOT BEEN CREDITED] 
 
@@ -172,6 +176,8 @@ CALCULATE THE AVERAGE HEIGHT OF PERSONS IN METERS FROM THE "PERSON" TABLE.
 Calculating the average height of persons in meters from the "Person" table provides insights into the physical attributes of individuals associated with the series. This information aids in understanding the diversity of heights among the cast and crew, contributing to a more comprehensive characterization of the personnel involved.
 
 CODE
+
+
 SELECT ROUND(AVG([height_meters]),2)  AS [AVERAGE HEIGHT OF PERSONS] FROM [dbo].[Person]
 
 OUTPUT
@@ -182,6 +188,8 @@ FIND THE EPISODE WITH THE MOST KEYWORDS.
 Finding the episode with the most keywords provides insights into the richness and complexity of its thematic content. This information helps understand the depth of narrative elements, allowing creators to identify episodes with intricate storytelling and potentially uncover patterns in keyword usage across the series.
 
 CODE
+
+
 SELECT TOP 1 [episode_id] AS [EPISODE ID],COUNT(*) AS [NUMBER OF KEYWORDS] FROM [dbo].[Keyword] GROUP BY [episode_id] ORDER BY [NUMBER OF KEYWORDS] DESC
 
 OUTPUT
@@ -193,6 +201,8 @@ CALCULATE THE AVERAGE HEIGHT OF PERSONS IN METERS FROM THE "PERSON" TABLE.
 Understanding the average height of persons aids in creating a more nuanced portrayal of characters in the series. This insight can influence casting decisions, character development, and contribute to a more realistic representation of individuals within the production.
 
 CODE
+
+
 SELECT ROUND(AVG([height_meters]),2)  AS [AVERAGE HEIGHT OF PERSONS] FROM [dbo].[Person]
 
 ![Screenshot](images/13.png)
@@ -202,6 +212,8 @@ IDENTIFY PERSONS WHO HAVE WON AWARDS IN MULTIPLE CATEGORIES.
 Recognizing these individuals with multiple awards underlines their versatile talents, showcasing their significant contributions to the series. This insight can guide future collaborations and decision-making, ensuring continued success in the industry.
 
 CODE
+
+
 SELECT 
 NULLIF(LTRIM(RTRIM([Person])), '') AS [PEOPLE WHO WON AWARDS], COUNT(DISTINCT [Award_category]) AS [THE VARIOUS CATEGORIES] FROM [dbo].[Award] 
 WHERE [Person]IS NOT NULL AND NULLIF(RTRIM(LTRIM([Person])), '') IS NOT NULL
@@ -215,6 +227,8 @@ LIST THE TOP 3 MOST COMMON BIRTHPLACES IN THE "PERSON" TABLE.
 Understanding the most common birthplaces contributes to a richer characterization of the series' personnel. Insights into geographic patterns enable producers and stakeholders to appreciate the diversity and cultural representation within the team. This information can influence decisions related to casting, storytelling, and fostering an inclusive working environment.
 
 CODE
+
+
 SELECT TOP 3 NULLIF(LTRIM(RTRIM([birth_place])), '') AS cleaned_birth_place,
 COUNT(*) AS birthplace_count FROM [dbo].[Person] WHERE [birth_place] IS NOT NULL AND NULLIF(LTRIM(RTRIM([birth_place])), '') IS NOT NULL GROUP BY NULLIF(LTRIM(RTRIM([birth_place])), '') ORDER BY birthplace_count DESC;
 
@@ -226,6 +240,8 @@ CALCULATE THE PERCENTAGE OF VOTES FOR EACH EPISODE IN THE "VOTE" TABLE.
 Understanding the percentage of votes for each episode guides content creators in tailoring future productions to align with viewer preferences. High-percentage episodes can be analyzed for successful storytelling elements, while lower-performing episodes may be assessed for improvement. This insight empowers strategic decisions to enhance audience engagement and overall satisfaction with the series.
 
 CODE
+
+
 SELECT [episode_id],
 COUNT(DISTINCT [episode_id]) AS [THE VARIOUS EPISODES] ,[votes] AS [NUMBER OF VOTES]
 ,[percent] AS [PERCENTAGE OF VOTES] FROM [dbo].[Vote] GROUP BY [votes], [percent], [episode_id] ORDER BY [votes] DESC
@@ -238,6 +254,8 @@ LIST THE TOP 3 MOST COMMON BIRTHPLACES IN THE "PERSON" TABLE.
 Understanding the top 3 most common birthplaces contributes to a nuanced appreciation of the series' personnel. This insight can inform decisions related to storytelling, character development, and casting, allowing creators to embrace and celebrate the diversity represented in the team. It fosters an inclusive narrative that resonates with a broader audience and enriches the overall viewing experience.
 
 CODE
+
+
 SELECT TOP 3 NULLIF(LTRIM(RTRIM([birth_place])), '') AS cleaned_birth_place, COUNT(*) AS birthplace_count FROM [dbo].[Person] WHERE [birth_place] IS NOT NULL AND NULLIF(LTRIM(RTRIM([birth_place])), '') IS NOT NULL GROUP BY NULLIF(LTRIM(RTRIM([birth_place])), '') ORDER BY birthplace_count DESC;
 
 OUTPUT
@@ -249,6 +267,8 @@ FIND THE EPISODE WITH THE MOST KEYWORDS.
 Identifying the episode with the most keywords allows creators to recognize storytelling intricacies and thematic depth. This insight aids in highlighting episodes that offer a comprehensive narrative experience. Content creators can leverage this information for promotional strategies, emphasizing episodes with rich thematic content to enhance viewer engagement and appreciation of the series.
 
 CODE
+
+
 SELECT TOP 1 EP.[episode] AS [EPISODE], EP.[air_date] AS [DATE AIRED],
 EP.[title] AS [TITILE OF EPISODE], COUNT(KD.[keyword]) AS [EPISODE WITH THE MOST KEY PHRASE] FROM [dbo].[Keyword] KD JOIN [dbo].[Episode] EP ON KD.[episode_id] = EP.[episode_id] GROUP BY EP.[title], EP.[episode],EP.[air_date] ORDER BY [EPISODE WITH THE MOST KEY PHRASE] DESC
 
@@ -260,6 +280,8 @@ FIND THE ORGANIZATION WITH THE HIGHEST NUMBER OF AWARDS IN A SPECIFIC YEAR.
 Identifying the top organization in a specific year offers insights into industry leaders. This knowledge informs strategic decisions, potential collaborations, and highlights the series' impact, contributing to a nuanced understanding of its standing in the industry.
 
 CODE
+
+
 SELECT TOP 1 [Organization] AS [ORGANIZATION], COUNT(*) AS [NUMBER OF AWARDS] FROM [dbo].[Award] WHERE [Year] = '2014' GROUP BY [Organization] ORDER BY [NUMBER OF AWARDS] DESC;
 
 OUTPUT
@@ -270,6 +292,8 @@ CALCULATE THE PERCENTAGE OF VOTES FOR EACH EPISODE IN THE "VOTE" TABLE.
 Analyzing vote percentages allows creators to focus on successful storytelling elements and understand audience preferences. This insight informs future content creation, enabling strategic decisions to maintain or improve viewer engagement, ensuring ongoing success for the series.
 
 CODE
+
+
 SELECT [episode_id],
 COUNT(DISTINCT [episode_id]) AS [THE VARIOUS EPISODES] ,[votes] AS [NUMBER OF VOTES]
 ,[percent] AS [PERCENTAGE OF VOTES] FROM [dbo].[Vote] GROUP BY [votes], [percent], [episode_id] ORDER BY [votes] DESC
@@ -278,6 +302,8 @@ OUTPUT
 ![Screenshot](images/20.png)
 
 CODE
+
+
 SELECT [episode_id] [THE VARIOUS EPISODES],[votes] [NUMBER OF VOTES],[percent] [PERCENTAGE OF VOTES] FROM [dbo].[Vote] ORDER BY [percent] DESC
 
 QUESTION 21: 
@@ -285,6 +311,8 @@ CALCULATE THE AVERAGE NUMBER OF VOTES PER EPISODE.
 Understanding the average votes per episode aids creators in identifying audience-favored content. This insight informs strategic decisions for storytelling, promotional efforts, and potential improvements to enhance overall viewer satisfaction and the success of the series.
 
 CODE
+
+
 SELECT 
 AVG([votes]) AS [NUMBER OF VOTES PER EPISODE] FROM [dbo].[Episode]
 
@@ -296,6 +324,8 @@ DETERMINE THE FIRST 100 PEOPLE WITH THE MOST CREDITED ROLES IN EPISODES.
 Spotting the first 100 prolific contributors sheds light on key individuals and their diverse roles. This insight guides decisions for future collaborations, ensuring continued success and recognition within the series.
 
 CODE
+
+
 SELECT TOP 100 CT.[person] AS [PERSON WITH THE MOST CREDITED ROLES], ED.[title] AS [EPISODE TITLE],CT.[role] AS [ROLE], CT.[credited] AS [CREDITED(TRUE OR FALSE)],
 ED.[episode_id] AS [EPISODE_ID] FROM [dbo].[Credit] CT JOIN [dbo].[Episode] ED
 ON CT.[Episode_id] =ED.[episode_id] ORDER BY [CREDITED(TRUE OR FALSE)] DESC
@@ -308,6 +338,8 @@ FIND THE ORGANIZATION WITH THE HIGHEST NUMBER OF AWARDS IN A SPECIFIC YEAR
 Understanding the leading organization for a specific year guides strategic decisions and potential collaborations with industry leaders. This insight deepens awareness of the series' influence and standing, shaping future initiatives for continued success.
 
 CODE
+
+
 SELECT TOP 1 [Organization] AS [ORGANIZATION], COUNT(*) AS [NUMBER OF AWARDS] FROM [dbo].[Award] WHERE [Year] = '2014' GROUP BY [Organization] ORDER BY [NUMBER OF AWARDS] DESC;
 
 OUTPUT
@@ -318,6 +350,8 @@ CALCULATE THE PERCENTAGE OF VOTES FOR EACH EPISODE IN THE "VOTE" TABLE.
 Analyzing vote percentages allows creators to focus on successful storytelling elements and understand audience preferences. This insight informs future content creation, enabling strategic decisions to maintain or improve viewer engagement, ensuring ongoing success for the series.
 
 CODE
+
+
 SELECT TOP 10 NULLIF(LTRIM(RTRIM([Person])),'') AS [INDIVIDUALS],COUNT(DISTINCT [Award]) AS [TOTAL NUMBER OF AWARDS] FROM[dbo].[Award] WHERE  NULLIF(LTRIM(RTRIM([Person])),'')  IS NOT NULL  AND  [Person] IS NOT NULL GROUP BY [Person] ORDER BY[TOTAL NUMBER OF AWARDS] DESC
 
 OUTPUT
@@ -328,6 +362,8 @@ FIND THE ORGANIZATION WITH THE HIGHEST NUMBER OF AWARDS IN A SPECIFIC YEAR.
 Understanding the leading organization for a specific year guides strategic decisions and potential collaborations with industry leaders. This insight deepens awareness of the series' influence and standing, shaping future initiatives for continued success.
 
 CODE
+
+
 SELECT ED1.[episode_id] [EPISODE_ID], ED1.[title] [EPISODE TITLE], ED2.[episode_id] [EPISODE2_ID],ED2.[title] [TITLE2_ID],ED1.[rating] FROM [dbo].[Episode] ED1 JOIN [dbo].[Episode] ED2 ON ED1.[rating] = ED2.[rating] AND ED1.[episode_id] <> ED2.[episode_id]
 WHERE ED1.[episode_id] < ED2.[episode_id] ORDER BY ED1.[rating] DESC
 
