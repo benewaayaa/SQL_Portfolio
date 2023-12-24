@@ -76,6 +76,8 @@ DISPLAY THE DISTINCT ROLES FROM THE "CREDIT" TABLE.
 Displaying the distinct roles from the "Credit" table offers a clear view of the diverse roles associated with the series. This insight helps recognize the breadth of contributions from various individuals, providing an understanding of the collaborative efforts behind the scenes.
 
 CODE
+
+
 SELECT DISTINCT [role] AS [THE VARIOUS ROLES]FROM [dbo].[Credit]
 
 OUTPUT
@@ -86,6 +88,8 @@ FIND THE MAXIMUM AND MINIMUM BIRTHDATES FROM THE "PERSON" TABLE.
 Listing unique organizations from the "Award" table shows the variety of entities acknowledging achievements. This helps understand the series' standing, assess the network of accolades, and recognize the diverse support contributing to its success.
 
 CODE
+
+
 SELECT MAX([birthdate]) AS [OLDEST DATE OF BIRTH],MIN([birthdate]) AS [YOUNGEST DATE OF BIRTH] FROM [dbo].[Person]
 
 OUTPUT
@@ -96,6 +100,8 @@ LIST THE TOP 5 EPISODES WITH THE HIGHEST RATINGS.
 Listing the top 5 episodes with the highest ratings offers insights into the most acclaimed and viewer-favored content. This information guides the understanding of audience preferences, enabling content creators to identify successful storytelling elements for future episodes
 
 CODE
+
+
 SELECT TOP 5 [title] AS [TITLE],[episode_id] AS [EPISODE ID],[rating] AS [TOP RATINGS]
 ,[episode] AS [TOP EPISODE] FROM [dbo].[Episode] ORDER BY [rating] DESC
 
@@ -107,6 +113,8 @@ FIND THE ORGANIZATION WITH THE HIGHEST NUMBER OF AWARDS IN A SPECIFIC YEAR.
 Identifying the organization with the highest number of awards in a specific year provides insights into which entity dominated the accolades during that period. This information helps gauge industry recognition, understand organizational achievements, and potentially uncover trends in award distribution over time.
 
 CODE
+
+
 SELECT TOP 1 [Organization],COUNT(*) AS [NUMBER OF AWARDS] FROM [dbo].[Award] WHERE [Year] = '2014'GROUP BY [Organization] ORDER BY [NUMBER OF AWARDS] DESC;
 
 OUTPUT
@@ -117,6 +125,8 @@ CALCULATE THE AVERAGE NUMBER OF VOTES PER EPISODE.
 Calculating the average number of votes per episode offers insights into the level of viewer engagement and popularity of each episode. This metric helps gauge the overall reception of the series and identify episodes that resonate most with the audience, aiding in content planning and strategy.
 
 CODE
+
+
 SELECT 
 AVG([votes]) AS [NUMBER OF VOTES PER EPISODE] FROM [dbo].[Episode]
 
@@ -128,6 +138,8 @@ IDENTIFY EPISODES WITH MORE THAN 100 VOTES IN THE "EPISODE" TABLE.
 Identifying episodes with more than 100 votes in the "Episode" table provides insights into the popularity threshold within the series. This information helps pinpoint episodes that have garnered significant viewer attention, indicating high engagement and potential areas of focus for analysis or promotion.
 
 CODE
+
+
 SELECT [episode_id] AS [EPISODE ID],[title] AS [TITLE],[votes] AS [NUMBER OF VOTES]
 FROM [dbo].[Episode] WHERE [votes] > 100 
 
